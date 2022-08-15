@@ -1,8 +1,9 @@
 # ITKTubeTK-CTTomosynthesisRegistration
 
 This repository contains modules and notebooks (written in python) to register 3D pulmonary (lung) vascular networks, generated from CT scans, with the corresponding 2D vessels in tomosynthesis projection images, generated using stationary digital chest tomosynthesis (sDCT).\
-A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed CT 3D vessels and the 3D tomosynthesis reconstruction volumes so the user can visually assess the success of the registration.\
-**Clinical Significance**: registering vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patients' exposure to high CT radiation [^1].
+A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
+**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
+
 
 ## Registration
 
@@ -35,7 +36,7 @@ A registration verification notebook is also included in this repository.  The v
 - **Shift** + **”** buttons to save
 - Save file as *“overlayMask_0XX.dcm”* where *XX* is mask number
 
-**View overlay**
+**View Overlay**
 - In command window: ```Imageviewer <path-to-image> -j <path-to-overlay>```
 
 ___
@@ -48,13 +49,13 @@ ___
 **Input**
 - *pipelineDir*: path to directory where results should be written 
 - *tube_file*: path to .tre file that contains tubes spatial objects of segmented pulmonary vasculature
-- *tube_out_file*: path to directory and file name of the transformed tube file
+- *tube_out_file*: path to directory and file name of transformed tube file
 - *recon_file_3D*: path to 3D tomosynthesis reconstruction
 - *ct_file*: path to CT volume
 - *solution_output_filename*: string containing file name to registration solution
 - *combined_image_filename*: string containing name of combined image file
 - *x_init*: array that contains initial estimated transform to situate vessels prior to registration (from registration, except translation in direction may need to be modified and rotation all 0 because re-orientation is not needed)
-- *img_3D*: path to tomosynthesis reconstruction with re-adjusted spacing
+- *img_3D*: path to tomosynthesis reconstruction with corrected spacing
 
 **Output**
 - Combined images
