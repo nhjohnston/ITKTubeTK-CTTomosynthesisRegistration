@@ -1,0 +1,6 @@
+numpy
+itk
+itkwidgets
+matplotlib
+scipy
+pathlib
