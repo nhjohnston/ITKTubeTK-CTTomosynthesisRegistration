@@ -62,6 +62,6 @@ ___
 ---
 | ![Verfication](ReadMeImages/ReadMe2.png)|
 |:--:| 
-| *Verfication: Compare untransformed, pre-registration CT vessels with transformed, post-registration CT vessels. See how CT vessels align with visable vessels in tomosynthesis reconstruction* |
+| *Verification: Compare untransformed, pre-registration CT vessels with transformed, post-registration CT vessels. See how CT vessels align with visable vessels in tomosynthesis reconstruction* |
 
 [^1]: https://www.researchgate.net/publication/269186336_Stationary_chest_tomosynthesis_using_a_carbon_nanotube_x-ray_source_array_A_feasibility_study
