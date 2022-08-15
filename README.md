@@ -4,6 +4,7 @@ This repository contains modules and notebooks (written in python) to register 3
 A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
 **Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
 
+
 ## Registration
 
 **Input**
@@ -21,7 +22,7 @@ A registration verification notebook is also included in this repository.  The v
 - *tomoReconFileNumber*: number greater than the number of tomosynthesis reconstruction slices
 
 **Output**:
-- *1x6 array*: [x translation, y translation, z translation, z rotation, y rotation, x rotation]
+- *1x6 array*: [xtranslation, ytranslation, ztranslation, zrotation, yrotation, xrotation]
 
 **How To Get .tre Vessel File**
 - 	[Kitware Medical: Lung Vessel Segmentation](https://www.example.comhttps://github.com/KitwareMedical/ITKTubeTK-CTLungs) (experiments folder)
@@ -29,8 +30,9 @@ A registration verification notebook is also included in this repository.  The v
 **How To Make Annotated Vessel Files**
 - [Kitware Medical: ImageViewer](https://github.com/KitwareMedical/ImageViewer) 
 - Open image in ImageViewer
-- **\\** button until PAINT2D appears bottom right corner
+- **\\** button until PAINT2D appears in bottom right corner
 - **\[** and **\]** buttons to adjust radius size
+- Draw over prominant vessels in tomosynthesis reconstruction slices (~8 images)
 - **Shift** + **”** buttons to save
 - Save file as *“overlayMask_0XX.dcm”* where *XX* is mask number
 
