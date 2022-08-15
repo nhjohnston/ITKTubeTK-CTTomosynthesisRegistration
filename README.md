@@ -1,8 +1,8 @@
 # ITKTubeTK-CTTomosynthesisRegistration
 
-This repository contains modules and notebooks (written in python) to register 3D pulmonary vascular networks generated from a CT scan with the corresponding 2D vessels in tomosynthesis projection images generated using stationary digital chest tomosynthesis (sDCT).\
-A registration verification notebook is also included in this repository.  This notebook generates a combined image with transformed 3D vessels and the 3D tomosynthesis reconstruction volumes so the user can visually assess  the success of the registration.\
-**Clinical Significance**: registering vessels from a preoperative CT scan with intraoperative Tomosynthesis images can enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
+This repository contains modules and notebooks (written in python) to register 3D pulmonary (lung) vascular networks, generated from CT scans, with the corresponding 2D vessels in tomosynthesis projection images, generated using stationary digital chest tomosynthesis (sDCT).\
+A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
+**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
 
 ## Registration
 
@@ -15,7 +15,7 @@ A registration verification notebook is also included in this repository.  This 
 - *ct_file*: path to CT volume
 - *destDir*: path to directory where masked images should be written
 - *parentDir*: path to directory where results should be written 
-- *solution_output_filename*: string containing .txt name of file to write solution to
+- *solution_output_filename*: string containing .txt name of solution file
 - *x_init*: array that contains initial estimated transform to situate vessels prior to registration
 - *tomoFileNumber*: number greater than the number of tomosynthesis projections
 - *tomoReconFileNumber*: number greater than the number of tomosynthesis reconstruction slices
@@ -28,13 +28,13 @@ A registration verification notebook is also included in this repository.  This 
 
 **How To Make Annotated Vessel Files**
 - [Kitware Medical: ImageViewer](https://github.com/KitwareMedical/ImageViewer) 
-- Open image in Imageviewer
-- **\\** until PAINT2D in bottom right corner
-- **\[** and **\]** to adjust radius size
-- **Shift** + **”** to save
+- Open image in ImageViewer
+- **\\** button until PAINT2D appears bottom right corner
+- **\[** and **\]** buttons to adjust radius size
+- **Shift** + **”** buttons to save
 - Save file as *“overlayMask_0XX.dcm”* where *XX* is mask number
 
-**View overlay**
+**View Overlay**
 - In command window: ```Imageviewer <path-to-image> -j <path-to-overlay>```
 
 ___
@@ -47,21 +47,21 @@ ___
 **Input**
 - *pipelineDir*: path to directory where results should be written 
 - *tube_file*: path to .tre file that contains tubes spatial objects of segmented pulmonary vasculature
-- *tube_out_file*: path to directory and file name that gives the location and name to write the transformed tube file to
+- *tube_out_file*: path to directory and file name of transformed tube file
 - *recon_file_3D*: path to 3D tomosynthesis reconstruction
 - *ct_file*: path to CT volume
 - *solution_output_filename*: string containing file name to registration solution
-- *combined_image_filename*: string containing name of file to write the combined image to
+- *combined_image_filename*: string containing name of combined image file
 - *x_init*: array that contains initial estimated transform to situate vessels prior to registration (from registration, except translation in direction may need to be modified and rotation all 0 because re-orientation is not needed)
-- *img_3D*: path to tomosynthesis reconstruction with re-adjusted spacing
+- *img_3D*: path to tomosynthesis reconstruction with corrected spacing
 
 **Output**
 - Combined images
 - Compare output of Registration Verification and Untransformed Registration Verification to see if vessel alignment was successful
 
 ---
-| ![Verfication](ReadMeImages/ReadMe2.png)|
+| ![Verification](ReadMeImages/ReadMe2.png)|
 |:--:| 
-| *Verfication: Compare untransformed, pre-registration CT vessels with transformed, post-registration CT vessels. See how CT vessels align with visable vessels in tomosynthesis reconstruction* |
+| *Verification: Compare untransformed, pre-registration CT vessels with transformed, post-registration CT vessels. See how CT vessels align with visable vessels in tomosynthesis reconstruction* |
 
 [^1]: https://www.researchgate.net/publication/269186336_Stationary_chest_tomosynthesis_using_a_carbon_nanotube_x-ray_source_array_A_feasibility_study
