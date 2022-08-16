@@ -25,7 +25,7 @@ A registration verification notebook is also included in this repository.  The v
 - *1x6 array*: [xtranslation, ytranslation, ztranslation, zrotation, yrotation, xrotation]
 
 **How To Get .tre Vessel File**
-- 	[Kitware Medical: Lung Vessel Segmentation](https://www.example.comhttps://github.com/KitwareMedical/ITKTubeTK-CTLungs) (experiments folder)
+- 	[Kitware Medical: Lung Vessel Segmentation](https://github.com/KitwareMedical/ITKTubeTK-CTLungs) (experiments folder)
 
 **How To Make Annotated Vessel Files**
 - [Kitware Medical: ImageViewer](https://github.com/KitwareMedical/ImageViewer) 
