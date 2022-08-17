@@ -6,7 +6,10 @@ A registration verification notebook is also included in this repository.  The v
 
 
 ## Registration
-
+| ![Registration](ReadMeImages/ReadMe1.png)|
+|:--:| 
+| *Registration: Find 3D translation and rotation parameters that align 3D vessel perspective projection with 2D tomosynthesis projection image* |
+___
 **Input**
 - *tomoProj_dir*: path to directory of tomosynthesis projection images
 - *tomoRecon_dir*: path to directory of tomosynthesis reconstruction images
@@ -39,11 +42,13 @@ A registration verification notebook is also included in this repository.  The v
 **View Overlay**
 - In command window: ```Imageviewer <path-to-image> -j <path-to-overlay>```
 
-___
-| ![Registration](ReadMeImages/ReadMe1.png)|
+**Expected Ouput**
+| ![OutputPlot](ReadMeImages/ReadMe3.png)|
 |:--:| 
-| *Registration: Find 3D translation and rotation parameters that align 3D vessel perspective projection with 2D tomosynthesis projection image* |
-
+| *Plot: Subeset of the un-registered data points (Yellow) and registered data points (Red) plotted* |
+| ![OutputOverlay](ReadMeImages/ReadMe4.png)|
+|:--:| 
+| *Overlay: The pipieline saves 29 projections of the CT points transformed with the registration solution for each emitter position, visualize with corresponding tomosynthesis image using the "View Overlay command listed above* |
 ## Verification
 
 **Input**
