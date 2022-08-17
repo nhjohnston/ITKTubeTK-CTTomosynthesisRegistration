@@ -2,7 +2,8 @@
 
 This repository contains modules and notebooks (written in python) to register 3D pulmonary (lung) vascular networks, generated from CT scans, with the corresponding 2D vessels in tomosynthesis projection images, generated using stationary digital chest tomosynthesis (sDCT).\
 A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
-**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
+**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].\
+[**Research Presentation Slides**](ReadMeImages/ChestTomoPresentation.pdf)
 
 
 ## Registration
