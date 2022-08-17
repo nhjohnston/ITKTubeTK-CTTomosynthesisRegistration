@@ -339,7 +339,7 @@ def MakeVesselMask(y, source, size, destDir):
         count = count + 1
         img = itk.GetImageFromArray(array)
         new_suffix = f'{i+1:02}.dcm'
-        itk.imwrite(img, destDir+"/mask_ct_"+new_suffix)
+        itk.imwrite(img, destDir+"/mask_{}"+new_suffix)
 
 
 def ProjectPositionCT(x, line, pnts, imgPath, size):
