@@ -3,11 +3,30 @@
 This repository contains modules and notebooks (written in python) to register 3D pulmonary (lung) vascular networks, generated from CT scans, with the corresponding 2D vessels in tomosynthesis projection images, generated using stationary digital chest tomosynthesis (sDCT).\
 A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
 **Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].\
-[**Research Presentation Slides**](ReadMeImages/ChestTomoPresentation.pdf)
+[**Research Presentation Slides**](ReadMeFiles/ChestTomoPresentation.pdf)
 
+## Folder Organization
+### Data
+**Folders**
+- *CT_02*: Contains the single CT file
+- *TomoAnnotation_02*: Contains 8 example vessel annotation files
+- *TomoProjection_02*: Contains 29 tomosynthesis projection images and the geo.txt file
+- *TomoReconstruction_02*: Contains 80 tomosynthesis reconstruction slices and one 3D tomosynthesis reconstruction volume
+- *Vessels_02*: Contains segmented vessel file
+### Results
+**Folders**
+- *Masks*: Folder where mask images are written
+- *MaskedTomo*: Folder where masked tomosynthesis projections are written
+- *SolutionTomo*: Folder were solution-transformed vessel overlays are written
 
+**Files**
+- combined_02: transformed combined CT and tomosynthesis reconstruction volume image file
+- combined_02_untransformed: untransformed CT and tomosynthesis reconstruction volume combined image file
+- CT-Lungs-Vessels_02_transformed: transformed vessel file
+- CT-Lungs-Vessels_02_untransformed: unstransformed vessel file
+- regSolution_02: text of 6 parameter solution to registration 
 ## Registration
-| ![Registration](ReadMeImages/ReadMe1.png)|
+| ![Registration](ReadMeFiles/ReadMe1.png)|
 |:--:| 
 | *Registration: Find 3D translation and rotation parameters that align 3D vessel perspective projection with 2D tomosynthesis projection image* |
 ___
@@ -44,10 +63,10 @@ ___
 - In command window: ```Imageviewer <path-to-image> -j <path-to-overlay>```
 
 **Expected Ouput**
-| ![OutputPlot](ReadMeImages/ReadMe3.png)|
+| ![OutputPlot](ReadMeFiles/ReadMe3.png)|
 |:--:| 
 | *Plot: Subeset of the un-registered data points (Yellow) and registered data points (Red) plotted* |
-| ![OutputOverlay](ReadMeImages/ReadMe4.png)|
+| ![OutputOverlay](ReadMeFiles/ReadMe4.png)|
 |:--:| 
 | *Overlay: The pipieline saves 29 projections of the CT points transformed with the registration solution for each emitter position, visualize with corresponding tomosynthesis image using the "View Overlay command listed above* |
 ## Verification
@@ -68,7 +87,7 @@ ___
 - Compare output of Registration Verification and Untransformed Registration Verification to see if vessel alignment was successful
 
 ---
-| ![Verification](ReadMeImages/ReadMe2.png)|
+| ![Verification](ReadMeFiles/ReadMe2.png)|
 |:--:| 
 | *Verification: Compare untransformed, pre-registration CT vessels with transformed, post-registration CT vessels. See how CT vessels align with visable vessels in tomosynthesis reconstruction* |
 
