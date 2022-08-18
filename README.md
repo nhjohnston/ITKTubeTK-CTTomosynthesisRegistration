@@ -2,11 +2,15 @@
 
 This repository contains modules and notebooks (written in python) to register 3D pulmonary (lung) vascular networks, generated from CT scans, with the corresponding 2D vessels in tomosynthesis projection images, generated using stationary digital chest tomosynthesis (sDCT).\
 A registration verification notebook is also included in this repository.  The verification notebook generates a combined image with transformed 3D CT vessels and the 3D tomosynthesis reconstructed volumes so the user can visually assess the success of the registration.\
-**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].
+**Clinical Significance**: registering pulmonary vessels from a preoperative CT scan with intraoperative Tomosynthesis images will enhance image guided lung biopsies by increasing the practicality of the procedure and reducing the patient’s exposure to high CT radiation [^1].\
+[**Research Presentation Slides**](ReadMeImages/ChestTomoPresentation.pdf)
 
 
 ## Registration
-
+| ![Registration](ReadMeImages/ReadMe1.png)|
+|:--:| 
+| *Registration: Find 3D translation and rotation parameters that align 3D vessel perspective projection with 2D tomosynthesis projection image* |
+___
 **Input**
 - *tomoProj_dir*: path to directory of tomosynthesis projection images
 - *tomoRecon_dir*: path to directory of tomosynthesis reconstruction images
@@ -39,11 +43,13 @@ A registration verification notebook is also included in this repository.  The v
 **View Overlay**
 - In command window: ```Imageviewer <path-to-image> -j <path-to-overlay>```
 
-___
-| ![Registration](ReadMeImages/ReadMe1.png)|
+**Expected Ouput**
+| ![OutputPlot](ReadMeImages/ReadMe3.png)|
 |:--:| 
-| *Registration: Find 3D translation and rotation parameters that align 3D vessel perspective projection with 2D tomosynthesis projection image* |
-
+| *Plot: Subeset of the un-registered data points (Yellow) and registered data points (Red) plotted* |
+| ![OutputOverlay](ReadMeImages/ReadMe4.png)|
+|:--:| 
+| *Overlay: The pipieline saves 29 projections of the CT points transformed with the registration solution for each emitter position, visualize with corresponding tomosynthesis image using the "View Overlay command listed above* |
 ## Verification
 
 **Input**
